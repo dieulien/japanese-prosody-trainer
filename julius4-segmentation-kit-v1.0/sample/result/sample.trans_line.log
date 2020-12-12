@@ -1,0 +1,219 @@
+STAT: jconf successfully finalized
+STAT: *** loading AM00 _default
+Stat: init_phmm: Reading in HMM definition
+Stat: rdhmmdef: ascii format HMM definition
+Stat: rdhmmdef: limit check passed
+Stat: rdhmmdef: this HMM does not need multipath handling
+Stat: init_phmm: defined HMMs:    43
+Stat: init_phmm: logical names:    43
+Stat: init_phmm: base phones:    43 used in logical
+Stat: init_phmm: finished reading HMM definitions
+STAT: *** AM00 _default loaded
+STAT: *** loading LM00 _default
+STAT: reading [./tmp.dfa] and [./tmp.dict]...
+Stat: init_voca: read 7 words
+STAT: done
+STAT: Gram #0 tmp: read
+STAT: gram "tmp" registered
+STAT: Gram #0 tmp: new grammar found, setup it for recognition
+STAT: Gram #0 tmp: installed
+STAT: grammar update completed
+STAT: *** LM00 _default loaded
+STAT: now all modules into fire for fusion...
+STAT: *** create MFCC calculation modules from AM
+STAT: AM 0 _default: create a new module MFCC01
+STAT: 1 MFCC modules created
+STAT: *** composing recognizer instance SR00 _default (AM00 _default, LM00 _default)
+STAT: Building HMM lexicon tree
+STAT: lexicon size: 45+0=45
+STAT: coordination check passed
+STAT: multi-gram: beam width set to 45 (guess) by lexicon change
+STAT: wchmm (re)build completed
+STAT: *** SR00 _default composed
+Stat: addlog: generating addlog table (size = 1953 kB)
+Stat: addlog: addlog table generated
+STAT: All init successfully done
+
+STAT: ###### initialize input device
+----------------------- System Information begin ---------------------
+JuliusLib rev.4.0.2 (fast)
+
+Engine specification:
+ -  Base setup   : fast
+ -  Supported LM : DFA, N-gram, Word
+ -  Extension    :
+ -  Compiled by  : gcc -O6 -fomit-frame-pointer
+
+------------------------------------------------------------
+Configuration of Modules
+
+ Number of defined modules: AM=1, LM=1, SR=1
+
+ Acoustic Model (with input parameter spec.):
+ - AM00 "_default"
+	hmmfilename=/home/nisimura/tex/ISTC/IPA_0103/phone_m/model/monof/mix16/gid/hmmdefs.gz
+
+ Language Model:
+ - LM00 "_default"
+	grammar #1:
+	    dfa  = ./tmp.dfa
+	    dict = ./tmp.dict
+
+ Recognizer:
+ - SR00 "_default" (AM00, LM00)
+
+------------------------------------------------------------
+Speech Analysis Module(s)
+
+[MFCC01]  for [AM00 _default]
+
+ Acoustic analysis condition:
+	       parameter = MFCC_E_D_N_Z (25 dimension from 12 cepstrum)
+	sample frequency = 16000 Hz
+	   sample period =  625  (1 = 100ns)
+	     window size =  400 samples (25.0 ms)
+	     frame shift =  160 samples (10.0 ms)
+	    pre-emphasis = 0.97
+	    # filterbank = 24
+	   cepst. lifter = 22
+	      raw energy = False
+	energy normalize = False
+	    delta window = 2 frames (20.0 ms) around
+	     hi freq cut = OFF
+	     lo freq cut = OFF
+	 zero mean frame = OFF
+	       use power = OFF
+    spectral subtraction = off
+     cepstral mean norm. = sentence CMN
+	 base setup from = Julius defaults
+
+------------------------------------------------------------
+Acoustic Model(s)
+
+[AM00 "_default"]
+
+ HMM Info:
+    43 models, 129 states, 2064 mixtures are defined
+	      model type = context dependency handling OFF
+      training parameter = MFCC_E_N_D_Z
+	   vector length = 25
+	cov. matrix type = DIAGC
+	   duration type = NULLD
+	 max mixture num = 16
+	   max state num = 5
+     logical base phones = 43
+	   skipping path = not exist
+
+ AM Parameters:
+        Gaussian pruning = none (full computation)  (-gprune)
+    short pause HMM name = "sp" specified, "sp" applied (physical)  (-sp)
+  cross-word CD on pass1 = handle by approx. (use average prob. of same LC)
+
+------------------------------------------------------------
+Language Model(s)
+
+[LM00 "_default"] type=grammar
+
+ DFA grammar info:
+      8 nodes, 7 arcs, 7 terminal(category) symbols
+      size of category-pair matrix is 6 bytes
+
+ Vocabulary Info:
+        vocabulary size  = 7 words, 15 models
+        average word len = 2.1 models, 6.4 states
+       maximum state num = 15 nodes per word
+       transparent words = not exist
+       words under class = not exist
+
+ Parameters:
+   found sp category IDs =
+
+------------------------------------------------------------
+Recognizer(s)
+
+[SR00 "_default"]  AM00 "_default"  +  LM00 "_default"
+
+ Lexicon tree:
+	 total node num =     45
+	  root node num =      7
+	  leaf node num =      7
+
+	(-penalty1) IW penalty1 = +0.0
+	(-penalty2) IW penalty2 = +0.0
+	(-cmalpha)CM alpha coef = 0.050000
+
+ Search parameters: 
+	    multi-path handling = no
+	(-b) trellis beam width = 45 (-1 or not specified - guessed)
+	(-n)search candidate num= 1
+	(-s)  search stack size = 500
+	(-m)    search overflow = after 2000 hypothesis poped
+	        2nd pass method = searching sentence, generating N-best
+	(-b2)  pass2 beam width = 30
+	(-lookuprange)lookup range= 5  (tm-5 <= t <tm+5)
+	(-sb)2nd scan beamthres = 80.0 (in logscore)
+	(-n)        search till = 1 candidates found
+	(-output)    and output = 1 candidates out of above
+	 output word alignments
+	 all possible words will be expanded in 2nd pass
+	 build_wchmm2() used
+	 lcdset limited by word-pair constraint
+	short pause segmentation = off
+	fall back on search fail = off, returns search failure
+
+------------------------------------------------------------
+Decoding algorithm:
+
+	1st pass input processing = buffered, batch
+	1st pass method = 1-best approx. generating indexed trellis
+	output word confidence measure based on search-time scores
+
+------------------------------------------------------------
+FrontEnd:
+
+ Speech input:
+	    speech input source = speech file
+	          input filelist = (none, enter filenames from stdin)
+	          sampling freq. = 16000 Hz required
+	         threaded A/D-in = supported, off
+	   zero frames stripping = on
+	         silence cutting = off
+	    long-term DC removal = off
+	      reject short input = off
+
+----------------------- System Information end -----------------------
+
+------
+### read waveform input
+Stat: adin_file: input speechfile: sample.wav
+STAT: 33000 samples (2.06 sec.)
+STAT: ### speech analysis (waveform -> MFCC)
+### Recognition: 1st pass (LR beam)
+pass1_best: w_0 w_1 w_2 w_3 w_4 w_5 w_6
+pass1_best_wordseq: 0 1 2 3 4 5 6
+pass1_best_phonemeseq: silB | ky o: | w a | i i | t e N k i | d a | silE
+pass1_best_score: -4603.678711
+### Recognition: 2nd pass (RL heuristic best-first)
+ALIGN: === word alignment begin ===
+STAT: 00 _default: 7 generated, 7 pushed, 8 nodes popped in 204
+sentence1: w_0 w_1 w_2 w_3 w_4 w_5 w_6
+wseq1: 0 1 2 3 4 5 6
+phseq1: silB | ky o: | w a | i i | t e N k i | d a | silE
+cmscore1: 1.000 1.000 1.000 1.000 1.000 1.000 1.000
+score1: -4603.670410
+=== begin forced alignment ===
+ id: from  to    n_score    unit
+ ----------------------------------------
+[   0   22]  -19.594141  0	[w_0]
+[  23   55]  -22.174799  1	[w_1]
+[  56   75]  -25.177307  2	[w_2]
+[  76   97]  -25.072176  3	[w_3]
+[  98  143]  -24.477884  4	[w_4]
+[ 144  159]  -24.572815  5	[w_5]
+[ 160  203]  -19.249168  6	[w_6]
+re-computed AM score: -4603.678711
+=== end forced alignment ===
+
+
+------
+### read waveform input

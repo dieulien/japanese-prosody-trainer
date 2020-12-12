@@ -1,0 +1,25 @@
+--- transcription ---
+m a i g e ts u
+--- generated DFA ---
+0 0 1 0 1
+1 -1 -1 1 0
+--- generated dict ---
+0 [w_0] m a i g e ts u
+----------------------
+
+============ ALIGNMENT RESULT ============
+input speechfile: C:\Users\dieul\research18\py2\new_training\align_tmp\tmp.wav
+10496 samples (0.66 sec.)
+=== begin forced alignment ===
+-- phoneme alignment --
+ id: from  to    n_score    unit
+ ----------------------------------------
+[   0    8]  -29.383684  m
+[   9   43]  -29.010738  a
+[  44   48]  -30.485523  i
+[  49   53]  -27.733032  g
+[  54   57]  -28.319702  e
+[  58   60]  -30.101278  ts
+[  61   63]  -28.227051  u
+re-computed AM score: -1859.185547
+=== end forced alignment ===

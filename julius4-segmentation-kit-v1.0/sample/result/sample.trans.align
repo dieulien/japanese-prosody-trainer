@@ -1,0 +1,32 @@
+--- transcription ---
+silB ky o: w a i i t e N k i d a silE
+--- generated DFA ---
+0 0 1 0 1
+1 -1 -1 1 0
+--- generated dict ---
+0 [w_0] silB ky o: w a i i t e N k i d a silE
+----------------------
+
+============ ALIGNMENT RESULT ============
+input speechfile: sample.wav
+33000 samples (2.06 sec.)
+=== begin forced alignment ===
+ id: from  to    n_score    unit
+ ----------------------------------------
+[   0   22]  -19.594141  silB
+[  23   31]  -25.734667  ky
+[  32   55]  -20.839849  o:
+[  56   67]  -23.585581  w
+[  68   75]  -27.564896  a
+[  76   87]  -26.436453  i
+[  88   97]  -23.435047  i
+[  98  106]  -23.542698  t
+[ 107  116]  -24.730494  e
+[ 117  126]  -24.588940  N
+[ 127  138]  -24.642313  k
+[ 139  143]  -25.039257  i
+[ 144  149]  -24.957642  d
+[ 150  159]  -24.341919  a
+[ 160  203]  -19.249168  silE
+re-computed AM score: -4603.678711
+=== end forced alignment ===
