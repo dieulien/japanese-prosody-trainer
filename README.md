@@ -4,8 +4,7 @@ An MVP for a prosody visualizer to help English speakers compare their speech pr
 Built with Tkinter, praatio, pyJuliusAlign, pyaudio, matplotlib.
 
 <div align='center'>
-![screenshot of the tool|50%](img/demo.png) 
-
+<img src="./img/demo.png" width="150">
 Left column: user-friendly prosody visualization at syllable level (orange = intensity, blue = pitch). Right column: original prosody data.
 Top: native speaker's prosody. Bottom: English speaker's prosody.
 </div>
@@ -25,9 +24,7 @@ For this project, I started out learning Python, built out the tool and other ma
 8 people participated in the qualitative evaluation sessions for the training scheme. Preceptors at the Japanese Language Department who had had more than 20 years teaching Japanese at US colleges evaluated the audio records of the participants' qualitatively and quantitatively. 85.7% of participants showed improvement in the pronunciation evaluation test after a short session.
 
 <div align='center'>
-
-![results|50%](img/results.png)
-
+<img src="./img/results.png" width="100">
 Pronunciation scores of the participants before and after the training (blue and red respectively).
 
 </div>
