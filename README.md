@@ -5,7 +5,7 @@ Built with Tkinter, praatio, pyJuliusAlign, pyaudio, matplotlib.
 
 <div align='center'>
 
-<img src=".img/demo.png"/> 
+<img src="./img/demo.png"/> 
 
 Left column: user-friendly prosody visualization at syllable level (orange = intensity, blue = pitch). Right column: original prosody data.
 
